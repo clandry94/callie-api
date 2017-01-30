@@ -7,3 +7,6 @@ gem 'json'
 # Development server
 gem 'puma'
 
+# Redis
+gem 'redis'
+gem 'redis-namespace'

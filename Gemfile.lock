@@ -5,6 +5,9 @@ GEM
     rack (1.6.5)
     rack-protection (1.5.3)
       rack
+    redis (3.3.2)
+    redis-namespace (1.5.2)
+      redis (~> 3.0, >= 3.0.4)
     sinatra (1.4.8)
       rack (~> 1.5)
       rack-protection (~> 1.4)
@@ -17,6 +20,8 @@ PLATFORMS
 DEPENDENCIES
   json
   puma
+  redis
+  redis-namespace
   sinatra
 
 BUNDLED WITH
