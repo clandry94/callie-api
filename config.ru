@@ -5,6 +5,6 @@ Bundler.require
 
 require './callie.rb'
 
-$REDIS = Redis.new
+$REDIS = Redis.new(url: ENV["REDIS_URL"]
 
 run Callie
