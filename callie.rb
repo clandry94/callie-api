@@ -12,8 +12,8 @@ class Callie < Sinatra::Base
 
   post '/queue/pop' do
     content_type :json
-    #pop_song_queue
-   
+    resp = pop_song_queue
+    resp.to_json
   end
 
   def push_song_queue url
@@ -26,5 +26,14 @@ class Callie < Sinatra::Base
 
   def get_top
     $REDIS.lindex "songs", 0
+  end
+
+  def pop_song_queue
+    begin
+      $REDIS.rpop("songs")
+      return { status: "ok" }
+    rescue
+      return { status: "error" }
+    end
   end
 end
