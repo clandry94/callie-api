@@ -1,3 +1,6 @@
+# Download source
+source 'https://rubygems.org'
+
 # Our webserver
 gem 'sinatra'
 
