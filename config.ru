@@ -1,3 +1,4 @@
+require 'sinatra/cross_origin'
 require 'rubygems'
 require 'bundler'
 require 'redis'

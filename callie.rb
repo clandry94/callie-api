@@ -1,8 +1,9 @@
 class Callie < Sinatra::Base
+  register Sinatra::CrossOrigin
   configure do
     enable :cross_origin
   end
-  
+
   get '/queue' do
     content_type :json
     { queue: get_song_queue }.to_json
